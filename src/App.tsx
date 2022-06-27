@@ -1,4 +1,6 @@
 import { Header } from './components/Header';
+import { NewTask } from './components/NewTask';
+import styles from './App.module.css';
 
 import './global.css';
 
@@ -7,7 +9,9 @@ export function App() {
     <div>
       <Header />
 
-      <h1>Home</h1>
+      <main className={styles.container}>
+        <NewTask />
+      </main>
     </div>
   )
 }
