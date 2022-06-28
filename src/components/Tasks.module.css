@@ -1,0 +1,145 @@
+.tasks {
+  margin-top: 4rem;
+}
+
+.tasks header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createdTasks strong{
+  font-size: 0.875rem;
+  color: var(--blue);
+}
+
+.completedTasks strong {
+  font-size: 0.875rem;
+  color: var(--purple);
+}
+
+.createdTasks span, .completedTasks span{
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  background: var(--gray-400);
+  color: var(--gray-200);
+}
+
+.noTasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--gray-300);
+  border-top: 1px solid #333333;
+  border-radius: 8px; 
+  margin-top: 1.563rem;
+}
+
+.noTasks img {
+  width: 56px;
+  height: 56px;  
+  margin-top: 4rem;
+}
+
+.noTasks span {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.noTasks span strong{
+  display: block;
+}
+
+.tasks ul {
+  margin-top: 1.5rem;
+}
+
+.myTasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.myTasks > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+
+.myTasks > div p {
+   font-size: 0.875rem; 
+  line-height: 1.25rem;
+}
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+  background-color: var(--purple-dark);
+  border: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.1rem;
+  width: 1.1rem;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxContainer .checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--gray-100);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.myTasks button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.myTasks button:hover {
+  color: var(--purple-dark);
+}
+
+

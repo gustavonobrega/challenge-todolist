@@ -3,6 +3,7 @@ import { NewTask } from './components/NewTask';
 import styles from './App.module.css';
 
 import './global.css';
+import { Tasks } from './components/Tasks';
 
 export function App() {
   return (
@@ -11,6 +12,8 @@ export function App() {
 
       <main className={styles.container}>
         <NewTask />
+
+        <Tasks />
       </main>
     </div>
   )
