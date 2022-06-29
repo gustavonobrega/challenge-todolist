@@ -70,6 +70,10 @@
   padding: 1rem;
 }
 
+.myTasks + .myTasks {
+  margin-top: 0.75rem;
+}
+
 .myTasks > div {
   display: flex;
   align-items: flex-start;
@@ -77,8 +81,13 @@
 }
 
 .myTasks > div p {
-   font-size: 0.875rem; 
+  font-size: 0.875rem; 
   line-height: 1.25rem;
+}
+
+.isComplete p {
+  text-decoration-line: line-through;
+  color: var(--gray-300);
 }
 
 .checkboxContainer {
@@ -139,7 +148,7 @@
 }
 
 .myTasks button:hover {
-  color: var(--purple-dark);
+  color: var(--danger);
 }
 
 
